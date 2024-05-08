@@ -45,7 +45,21 @@ char question_IE() { // I, E 판별 질문
         return 'E';
 }
 char question_NS() { // N, S 판별 질문
+    int answer;
+    printf("질문 1. 모르는 사람에게 쉽게 말을 걸 수 있나요?\n 1.예 2.아니요\n");
+    scanf("%d", &answer);
+    if (answer == 1) I++; else E++;
+    printf("\n");
 
+    printf("질문 2. 사람을 자주 만나는 것이 좋나요?\n 1.예 2.아니요\n");
+    scanf("%d", &answer);
+    if (answer == 1) I++; else E++;
+    printf("\n");
+
+    if (I > E)
+        return 'I';
+    else
+        return 'E';
 }
 char question_TF() { // T, F 판별 질문
 
